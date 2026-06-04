@@ -32,9 +32,9 @@
   --hvp-gradient-tri:   linear-gradient(135deg, rgba(46,125,50,.3), rgba(10,61,145,.3), rgba(211,47,47,.3));
 
   /* ── TYPOGRAPHIE ── */
-  --font-display: 'Bebas Neue', sans-serif;   /* Titres grands, headers */
-  --font-body:    'Outfit', sans-serif;        /* Texte courant */
-  --font-mono:    'DM Mono', monospace;        /* Labels, codes */
+  --font-display: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;   /* Titres grands, headers */
+  --font-body:    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;   /* Texte courant */
+  --font-mono:    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;   /* Labels, codes */
 
   /* ── ESPACEMENTS (grille de 8px) ── */
   --space-xs:   8px;

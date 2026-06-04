@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio — Horeb Vision Pub · Abidjan</title>
   <meta name="description" content="Découvrez nos réalisations : logos, sites web, publicités animées, marketing digital. Portfolio Horeb Vision Pub à Abidjan.">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/navbar.css">
@@ -140,6 +139,15 @@
       justify-content: center;
       position: relative;
       overflow: hidden;
+    }
+
+    .portfolio-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .portfolio-image::before {
@@ -358,6 +366,7 @@
     <div class="portfolio-grid">
       <div class="portfolio-item" data-category="logo print">
         <div class="portfolio-image">
+          <img src="medias/logosrestaurant.png" alt="Logo Restaurant Gourmet">
           <div class="portfolio-image-icon">🎨</div>
         </div>
         <div class="portfolio-content">
@@ -374,6 +383,7 @@
 
       <div class="portfolio-item" data-category="web marketing">
         <div class="portfolio-image">
+          <img src="medias/e-commerce.png" alt="E-commerce Mode">
           <div class="portfolio-image-icon">💻</div>
         </div>
         <div class="portfolio-content">
@@ -406,6 +416,7 @@
 
       <div class="portfolio-item" data-category="logo web">
         <div class="portfolio-image">
+          <img src="medias/startuptech.png" alt="Startup Tech">
           <div class="portfolio-image-icon">🚀</div>
         </div>
         <div class="portfolio-content">
@@ -422,6 +433,7 @@
 
       <div class="portfolio-item" data-category="print marketing">
         <div class="portfolio-image">
+          <img src="medias/campagneevenement.png" alt="Campagne Événementielle">
           <div class="portfolio-image-icon">📢</div>
         </div>
         <div class="portfolio-content">
