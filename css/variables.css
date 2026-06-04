@@ -1,0 +1,75 @@
+/* ============================================
+   VARIABLES CSS — HOREB VISION PUB
+   Palette moderne et cohérente
+   ============================================ */
+
+:root {
+  /* ── PALETTE OFFICIELLE ── */
+  --primary: #0A3D91;     /* Bleu profond : titres, liens, boutons */
+  --secondary: #D32F2F;   /* Rouge doux : accents, hover principaux */
+  --accent: #2E7D32;      /* Vert moderne : validation, petites icônes */
+  --light-bg: #F7F9FC;    /* Fond global clair */
+  --light-grey: #ECEFF1;  /* Fond de sections */
+  --text-dark: #212121;   /* Texte principal */
+  --text-grey: #455A64;   /* Texte secondaire */
+
+  /* ── COULEURS PRINCIPALES (mises à jour) ── */
+  --hvp-red:        var(--secondary);   /* Rouge doux — CTA, accents */
+  --hvp-green:      var(--accent);      /* Vert moderne — succès, validation */
+  --hvp-blue:       var(--primary);     /* Bleu profond — confiance, tech */
+  --hvp-black:      var(--text-dark);   /* Noir — texte principal */
+  --hvp-white:      var(--light-bg);    /* Blanc cassé — fonds clairs */
+
+  /* ── COULEURS SECONDAIRES ── */
+  --hvp-gray:       var(--light-grey);  /* Fond sections clair */
+  --hvp-gray-2:     #FFFFFF;            /* Fond cards blanc */
+  --hvp-muted:      var(--text-grey);   /* Texte discret */
+  --hvp-border:     #E0E0E0;            /* Bordures subtiles */
+
+  /* ── DÉGRADÉS ── */
+  --hvp-gradient-red:   linear-gradient(135deg, var(--secondary), #B71C1C);
+  --hvp-gradient-dark:  linear-gradient(160deg, var(--light-bg) 0%, var(--light-grey) 100%);
+  --hvp-gradient-tri:   linear-gradient(135deg, rgba(46,125,50,.3), rgba(10,61,145,.3), rgba(211,47,47,.3));
+
+  /* ── TYPOGRAPHIE ── */
+  --font-display: 'Bebas Neue', sans-serif;   /* Titres grands, headers */
+  --font-body:    'Outfit', sans-serif;        /* Texte courant */
+  --font-mono:    'DM Mono', monospace;        /* Labels, codes */
+
+  /* ── ESPACEMENTS (grille de 8px) ── */
+  --space-xs:   8px;
+  --space-sm:   16px;
+  --space-md:   24px;
+  --space-lg:   32px;
+  --space-xl:   48px;
+  --space-2xl:  64px;
+  --space-3xl:  96px;
+
+  /* ── BORDURES ── */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+
+  /* ── TRANSITIONS ── */
+  --transition-fast:   0.15s ease;
+  --transition-base:   0.25s ease;
+  --transition-slow:   0.4s ease;
+
+  /* ── OMBRES ── */
+  --shadow-red:   0 4px 16px rgba(211, 47, 47, 0.2);
+  --shadow-card:  0 2px 12px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.15);
+  --shadow-glow:  0 0 20px rgba(10, 61, 145, 0.3);
+
+  /* ── ANIMATIONS ── */
+  --anim-duration-fast: 0.15s;
+  --anim-duration-base: 0.25s;
+  --anim-duration-slow: 0.4s;
+  --anim-easing: cubic-bezier(0.4, 0, 0.2, 1);
+  --anim-easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --shadow-sm:    0 1px 4px rgba(0, 0, 0, 0.1);
+
+  /* ── LAYOUT ── */
+  --max-width: 1200px;
+  --navbar-height: 70px;
+}

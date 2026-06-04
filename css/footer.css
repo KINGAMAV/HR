@@ -1,0 +1,194 @@
+/* ============================================
+   FOOTER — HOREB VISION PUB
+   ============================================ */
+
+.footer {
+  background: var(--light-grey);
+  border-top: 1px solid #E0E0E0;
+  padding-top: var(--space-3xl);
+}
+
+/* ── PARTIE HAUTE DU FOOTER ── */
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+  border-bottom: 1px solid #E0E0E0;
+}
+
+/* ── COLONNE MARQUE ── */
+.footer-brand-col {}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--space-md);
+}
+
+.footer-logo-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.footer-logo-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  letter-spacing: 0.08em;
+}
+
+.footer-logo-name span {
+  color: var(--secondary);
+}
+
+.footer-desc {
+  font-size: 0.85rem;
+  color: var(--text-grey);
+  line-height: 1.75;
+  margin-bottom: var(--space-md);
+  max-width: 280px;
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.footer-social-link {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #E0E0E0;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: var(--text-grey);
+  transition: all var(--transition-fast);
+}
+
+.footer-social-link:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+  background: rgba(211, 47, 47, 0.08);
+}
+
+/* ── COLONNES LIENS ── */
+.footer-col-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  font-size: 0.85rem;
+  color: var(--text-grey);
+  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-link::before {
+  content: '→';
+  font-size: 0.7rem;
+  color: var(--secondary);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--text-dark);
+}
+
+.footer-link:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── CONTACT INFOS ── */
+.footer-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: var(--space-sm);
+}
+
+.footer-contact-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+.footer-contact-value {
+  font-size: 0.85rem;
+  color: var(--text-grey);
+}
+
+/* ── PARTIE BASSE DU FOOTER ── */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) 0;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.footer-copy {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-grey);
+  letter-spacing: 0.05em;
+}
+
+.footer-copy span {
+  color: var(--secondary);
+}
+
+.footer-badges {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

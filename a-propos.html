@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horeb Vision Pub — À Propos · Abidjan</title>
+  <meta name="description" content="Découvrez Horeb Vision Pub : agence de communication 360° à Abidjan spécialisée en design graphique, marketing digital et création de contenu.">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+/* ============================================
+   VARIABLES CSS — HOREB VISION PUB
+   Palette moderne et cohérente
+   ============================================ */
+
+:root {
+  /* ── PALETTE OFFICIELLE ── */
+  --primary: #0A3D91;     /* Bleu profond : titres, liens, boutons */
+  --secondary: #D32F2F;   /* Rouge doux : accents, hover principaux */
+  --accent: #2E7D32;      /* Vert moderne : validation, petites icônes */
+  --light-bg: #F7F9FC;    /* Fond global clair */
+  --light-grey: #ECEFF1;  /* Fond de sections */
+  --text-dark: #212121;   /* Texte principal */
+  --text-grey: #455A64;   /* Texte secondaire */
+
+  /* ── COULEURS PRINCIPALES (mises à jour) ── */
+  --hvp-red:        var(--secondary);   /* Rouge doux — CTA, accents */
+  --hvp-green:      var(--accent);      /* Vert moderne — succès, validation */
+  --hvp-blue:       var(--primary);     /* Bleu profond — confiance, tech */
+  --hvp-black:      var(--text-dark);   /* Noir — texte principal */
+  --hvp-white:      var(--light-bg);    /* Blanc cassé — fonds clairs */
+
+  /* ── COULEURS SECONDAIRES ── */
+  --hvp-gray:       var(--light-grey);  /* Fond sections clair */
+  --hvp-gray-2:     #FFFFFF;            /* Fond cards blanc */
+  --hvp-muted:      var(--text-grey);   /* Texte discret */
+  --hvp-border:     #E0E0E0;            /* Bordures subtiles */
+
+  /* ── DÉGRADÉS ── */
+  --hvp-gradient-red:   linear-gradient(135deg, var(--secondary), #B71C1C);
+  --hvp-gradient-dark:  linear-gradient(160deg, var(--light-bg) 0%, var(--light-grey) 100%);
+  --hvp-gradient-tri:   linear-gradient(135deg, rgba(46,125,50,.3), rgba(10,61,145,.3), rgba(211,47,47,.3));
+
+  /* ── TYPOGRAPHIE ── */
+  --font-display: 'Bebas Neue', sans-serif;   /* Titres grands, headers */
+  --font-body:    'Outfit', sans-serif;        /* Texte courant */
+  --font-mono:    'DM Mono', monospace;        /* Labels, codes */
+
+  /* ── ESPACEMENTS (grille de 8px) ── */
+  --space-xs:   8px;
+  --space-sm:   16px;
+  --space-md:   24px;
+  --space-lg:   32px;
+  --space-xl:   48px;
+  --space-2xl:  64px;
+  --space-3xl:  96px;
+
+  /* ── BORDURES ── */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+
+  /* ── TRANSITIONS ── */
+  --transition-fast:   0.15s ease;
+  --transition-base:   0.25s ease;
+  --transition-slow:   0.4s ease;
+
+  /* ── OMBRES ── */
+  --shadow-red:   0 4px 16px rgba(211, 47, 47, 0.2);
+  --shadow-card:  0 2px 12px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.15);
+  --shadow-glow:  0 0 20px rgba(10, 61, 145, 0.3);
+
+  /* ── ANIMATIONS ── */
+  --anim-duration-fast: 0.15s;
+  --anim-duration-base: 0.25s;
+  --anim-duration-slow: 0.4s;
+  --anim-easing: cubic-bezier(0.4, 0, 0.2, 1);
+  --anim-easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --shadow-sm:    0 1px 4px rgba(0, 0, 0, 0.1);
+
+  /* ── LAYOUT ── */
+  --max-width: 1200px;
+  --navbar-height: 70px;
+}
+
+/* ============================================
+   BASE CSS — RESET & STYLES GÉNÉRAUX
+   Horeb Vision Pub
+   ============================================ */
+
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-body), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, var(--light-bg) 0%, #eef3f8 100%);
+  color: var(--text-dark);
+  line-height: 1.75;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+}
+
+/* ── CONTENEUR PRINCIPAL ── */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* ── TYPOGRAPHIE GÉNÉRALE ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+h1 { font-size: clamp(3rem, 8vw, 7rem); }
+h2 { font-size: clamp(2rem, 5vw, 4rem); }
+h3 { font-size: clamp(1.2rem, 3vw, 1.8rem); }
+
+p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-grey);
+}
+
+/* ── CLASSES UTILITAIRES ── */
+.text-primary   { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-accent    { color: var(--accent); }
+.text-muted     { color: var(--text-grey); }
+
+.section {
+  padding: var(--space-3xl) 0;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--secondary);
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.section-title {
+  margin-bottom: var(--space-xl);
+}
+
+.section-title span {
+  color: var(--secondary);
+}
+
+.section-label.centered {
+  justify-content: center;
+  display: flex;
+}
+
+/* ── BOUTONS ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 14px 32px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-md);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 4px 15px rgba(10, 61, 145, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary), #003d91);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(10, 61, 145, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 2px 10px rgba(10, 61, 145, 0.3);
+}
+
+.btn-outline {
+  border: 2px solid #E0E0E0;
+  color: var(--text-dark);
+  background: transparent;
+  position: relative;
+}
+
+.btn-outline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--secondary);
+  transition: width 0.3s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(211, 47, 47, 0.2);
+}
+
+.btn-outline:hover::after {
+  width: 100%;
+}
+
+.btn-outline:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* ── BADGE / TAG ── */
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+}
+
+.badge-red   { background: rgba(211,47,47,.12);  color: var(--secondary);   border: 1px solid rgba(211,47,47,.2); }
+.badge-green { background: rgba(46,125,50,.12);  color: var(--accent); border: 1px solid rgba(46,125,50,.2); }
+.badge-blue  { background: rgba(10,61,145,.12);  color: var(--primary); border: 1px solid rgba(10,61,145,.2); }
+
+/* ── FORMULAIRES ── */
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text-grey);
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+  transition: color 0.3s ease;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #E0E0E0;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  position: relative;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-grey);
+  transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+  transform: translateY(-2px);
+}
+
+.form-input:focus::placeholder,
+.form-textarea:focus::placeholder {
+  color: transparent;
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.form-input:hover,
+.form-select:hover,
+.form-textarea:hover {
+  border-color: rgba(211, 47, 47, 0.5);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-submit-btn {
+  background: var(--secondary);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.form-submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.form-submit-btn:hover {
+  background: linear-gradient(135deg, var(--secondary), #B71C1C);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(211, 47, 47, 0.3);
+}
+
+.form-submit-btn:hover::before {
+  left: 100%;
+}
+
+.form-submit-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Animations de validation de formulaire */
+.form-input.valid {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+  animation: bounceIn 0.5s ease;
+}
+
+.form-input.invalid {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+  animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* ── EFFETS SPÉCIAUX ── */
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.floating-particle {
+  animation: float-particle 15s linear infinite;
+}
+
+@keyframes float-particle {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* États de formulaire */
+.form-group.focused .form-label {
+  color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.form-group.focused .form-input,
+.form-group.focused .form-textarea,
+.form-group.focused .form-select {
+  transform: translateY(-2px);
+}
+
+/* ── SECTIONS ALTERNÉES ── */
+.section-dark  { background: var(--text-dark); color: white; }
+.section-gray  { background: var(--light-grey); color: var(--text-dark); }
+.section-light {
+  background: var(--light-bg);
+  color: var(--text-dark);
+}
+.section-light p { color: rgba(33,33,33,0.75); }
+.section-light h2, .section-light h3 { color: var(--text-dark); }
+
+/* ── ANIMATIONS GLOBALES ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(10, 61, 145, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(10, 61, 145, 0.6); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes rotateIn {
+  from { opacity: 0; transform: rotate(-10deg) scale(0.9); }
+  to   { opacity: 1; transform: rotate(0deg) scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.7; transform: scale(1.03); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Classes d'animation utilitaires */
+.animate-fade-in-up { animation: fadeInUp 0.8s ease forwards; }
+.animate-fade-in-left { animation: fadeInLeft 0.8s ease forwards; }
+.animate-fade-in-right { animation: fadeInRight 0.8s ease forwards; }
+.animate-scale-in { animation: scaleIn 0.6s ease forwards; }
+.animate-slide-in-up { animation: slideInUp 0.8s ease forwards; }
+.animate-bounce-in { animation: bounceIn 0.8s ease forwards; }
+.animate-rotate-in { animation: rotateIn 0.7s ease forwards; }
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-pulse { animation: pulse 2s ease-in-out infinite; }
+.animate-glow { animation: glow 2s ease-in-out infinite; }
+
+/* Animations au survol */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 25px rgba(10, 61, 145, 0.4);
+  transform: scale(1.05);
+}
+
+.hover-color-shift {
+  transition: all 0.3s ease;
+}
+
+.hover-color-shift:hover {
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  color: white;
+  transform: scale(1.05);
+}
+
+.hover-shadow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations de clic */
+.click-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.click-ripple::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.click-ripple:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Animations décoratives */
+.decorative-pulse {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.decorative-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.decorative-rotate {
+  animation: spin 8s linear infinite;
+}
+
+.shimmer-effect {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* ── CHARGEMENT DE PAGE ── */
+body:not(.loaded) {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+body.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Loading spinner */
+.loading-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(10, 61, 145, 0.1);
+  border-top: 3px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 9999;
+}
+
+/* ============================================
+   NAVBAR — HOREB VISION PUB
+   ============================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  z-index: 1000;
+  transition: background var(--transition-base), box-shadow var(--transition-base);
+}
+
+/* Quand on scroll, la navbar devient opaque */
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 #E0E0E0;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* ── LOGO ── */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.navbar-logo-icon {
+  width: 38px;
+  height: 38px;
+  background: var(--primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: white;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.navbar-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.navbar-logo-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--text-dark);
+  letter-spacing: 0.08em;
+}
+
+.navbar-logo-sub {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-grey);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ── MENU DESKTOP ── */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.navbar-link {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-grey);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--secondary);
+  transition: width var(--transition-base);
+}
+
+.navbar-link:hover {
+  color: var(--secondary);
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after,
+.navbar-link.active::after {
+  width: 100%;
+}
+
+
+.navbar-link.active,
+.navbar-link:active {
+  color: var(--secondary);
+}
+
+/* ── BOUTON CTA NAVBAR ── */
+.navbar-cta {
+  padding: 10px 24px;
+  font-size: 0.8rem;
+}
+
+/* ── MENU BURGER (mobile) ── */
+.navbar-burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.navbar-burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-dark);
+  border-radius: 2px;
+  transition: all var(--transition-base);
+  transform-origin: center;
+}
+
+/* Animation burger → croix */
+.navbar-burger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar-burger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.navbar-burger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── MENU MOBILE ── */
+.navbar-mobile {
+  display: none;
+  position: fixed;
+  top: var(--navbar-height);
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(16px);
+  padding: var(--space-md) var(--space-md) var(--space-xl);
+  border-top: 1px solid #E0E0E0;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.08);
+  flex-direction: column;
+  gap: var(--space-xs);
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: all var(--transition-base);
+}
+
+.navbar-mobile.open {
+  display: flex;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar-mobile-link {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid #E0E0E0;
+  transition: color var(--transition-fast);
+  letter-spacing: 0.05em;
+}
+
+.navbar-mobile-link:hover {
+  color: var(--primary);
+}
+
+.navbar-mobile .btn {
+  margin-top: var(--space-sm);
+  text-align: center;
+  justify-content: center;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-burger {
+    display: flex;
+  }
+}
+
+/* ============================================
+   FOOTER — HOREB VISION PUB
+   ============================================ */
+
+.footer {
+  background: var(--light-grey);
+  border-top: 1px solid #E0E0E0;
+  padding-top: var(--space-3xl);
+}
+
+/* ── PARTIE HAUTE DU FOOTER ── */
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+  border-bottom: 1px solid #E0E0E0;
+}
+
+/* ── COLONNE MARQUE ── */
+.footer-brand-col {}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--space-md);
+}
+
+.footer-logo-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.footer-logo-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  letter-spacing: 0.08em;
+}
+
+.footer-logo-name span {
+  color: var(--secondary);
+}
+
+.footer-desc {
+  font-size: 0.85rem;
+  color: var(--text-grey);
+  line-height: 1.75;
+  margin-bottom: var(--space-md);
+  max-width: 280px;
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.footer-social-link {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #E0E0E0;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: var(--text-grey);
+  transition: all var(--transition-fast);
+}
+
+.footer-social-link:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+  background: rgba(211, 47, 47, 0.08);
+}
+
+/* ── COLONNES LIENS ── */
+.footer-col-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  font-size: 0.85rem;
+  color: var(--text-grey);
+  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-link::before {
+  content: '→';
+  font-size: 0.7rem;
+  color: var(--secondary);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--text-dark);
+}
+
+.footer-link:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── CONTACT INFOS ── */
+.footer-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: var(--space-sm);
+}
+
+.footer-contact-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+
+.footer-contact-value {
+  font-size: 0.85rem;
+  color: var(--text-grey);
+}
+
+/* ── PARTIE BASSE DU FOOTER ── */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) 0;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.footer-copy {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-grey);
+  letter-spacing: 0.05em;
+}
+
+.footer-copy span {
+  color: var(--secondary);
+}
+
+.footer-badges {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.sponsors {
+  padding: 50px 0;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.sponsors h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.sponsor-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: white;
+  padding: 20px 0;
+}
+
+.sponsor-track {
+  display: flex;
+  gap: 50px;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.sponsor-track img {
+  width: 150px;
+  height: 80px;
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+.sponsor-track img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ============================================
+   A-PROPOS.CSS — PAGE À PROPOS
+   Horeb Vision Pub
+   ============================================ */
+
+.about-hero {
+  min-height: 60vh;
+  padding-top: var(--navbar-height);
+  background: var(--light-bg);
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Grille décorative — même style que la home */
+.about-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(10,61,145,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10,61,145,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* Cercle lumineux décoratif */
+.about-hero::after {
+  content: '';
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(10,61,145,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.about-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: var(--space-3xl) 0;
+}
+
+.about-hero-content .section-label {
+  color: var(--secondary);
+}
+
+.about-hero-content h1 {
+  margin-bottom: var(--space-lg);
+  color: var(--text-dark);
+}
+
+.about-hero-content h1 span {
+  color: var(--secondary);
+}
+
+.about-hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: var(--space-xl);
+  color: var(--text-grey);
+}
+
+.about-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-hero-icon {
+  width: 200px;
+  height: 200px;
+  background: rgba(10,61,145,0.06);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  border: 2px solid rgba(10,61,145,0.12);
+  box-shadow: 0 0 40px rgba(10,61,145,0.08);
+}
+
+.about-story {
+  padding: var(--space-3xl) 0;
+  background: var(--light-bg);
+}
+
+.about-story-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.about-story-content h2 {
+  margin-bottom: var(--space-lg);
+  color: var(--text-dark);
+}
+
+.about-story-content p {
+  margin-bottom: var(--space-lg);
+  color: var(--text-grey);
+  line-height: 1.8;
+}
+
+.about-story-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-story-icon {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--secondary), #B71C1C);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  color: white;
+  box-shadow: 0 20px 40px rgba(211, 47, 47, 0.3);
+}
+
+.about-values {
+  padding: var(--space-3xl) 0;
+  background: var(--light-grey);
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-xl);
+}
+
+.about-value-card {
+  background: white;
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #E0E0E0;
+}
+
+.about-value-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  border-color: rgba(211,47,47,0.2);
+}
+
+.about-value-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  margin: 0 auto var(--space-lg);
+  box-shadow: 0 8px 20px rgba(10, 61, 145, 0.3);
+}
+
+.about-value-title {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  margin-bottom: var(--space-md);
+  font-weight: 600;
+}
+
+.about-value-desc {
+  color: var(--text-grey);
+  line-height: 1.6;
+}
+
+.about-team {
+  padding: var(--space-3xl) 0;
+  background: var(--light-bg);
+}
+
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xl);
+}
+
+.about-team-member {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #E0E0E0;
+}
+
+.about-team-member:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  border-color: rgba(10,61,145,0.2);
+}
+
+.about-team-photo {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-team-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.about-team-member:hover .about-team-photo::before {
+  transform: translateX(100%);
+}
+
+.about-team-content {
+  padding: var(--space-lg);
+}
+
+.about-team-name {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  margin-bottom: var(--space-xs);
+  font-weight: 600;
+}
+
+.about-team-role {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--secondary);
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+}
+
+.about-team-desc {
+  color: var(--text-grey);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.about-stats {
+  padding: var(--space-3xl) 0;
+  background: var(--primary);
+  color: white;
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-xl);
+  text-align: center;
+}
+
+.about-stat-item {
+  padding: var(--space-lg);
+}
+
+.about-stat-number {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: white;
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.about-stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+}
+
+.about-cta {
+  padding: var(--space-3xl) 0;
+  background: var(--light-bg);
+  text-align: center;
+}
+
+.about-cta h2 {
+  margin-bottom: var(--space-lg);
+  color: var(--text-dark);
+}
+
+.about-cta p {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-xl);
+  color: var(--text-grey);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-cta-actions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-cta .btn-outline {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.about-cta .btn-outline:hover {
+  border-color: var(--secondary);
+  background: rgba(211, 47, 47, 0.08);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .about-hero-inner,
+  .about-story-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-values-grid,
+  .about-team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+  </style>
+</head>
+<body>
+
+<div class="loading-spinner"></div>
+
+<nav class="navbar">
+  <div class="container navbar-inner">
+    <a href="horeb-vision-complete.html" class="navbar-logo">
+      <div class="navbar-logo-icon"><img src="WhatsApp Image 2026-05-04 at 12.22.53.jpeg" alt="logo"></div>
+      <div class="navbar-logo-text">
+        <span class="navbar-logo-name">Horeb Vision Pub SARL</span>
+        <span class="navbar-logo-sub">Communication & Digital</span>
+      </div>
+    </a>
+    <div class="navbar-menu">
+      <ul class="navbar-links">
+        <li><a href="horeb-vision-complete.html" class="navbar-link">Accueil</a></li>
+        <li><a href="services.html" class="navbar-link">Services</a></li>
+        <li><a href="portfolio.html" class="navbar-link">Portfolio</a></li>
+        <li><a href="a-propos.html" class="navbar-link active">À Propos</a></li>
+        <li><a href="contact.html" class="navbar-link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary navbar-cta">Devis Gratuit</a>
+    </div>
+    <button class="navbar-burger" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="navbar-mobile">
+  <a href="horeb-vision-complete.html" class="navbar-mobile-link">Accueil</a>
+  <a href="services.html" class="navbar-mobile-link">Services</a>
+  <a href="portfolio.html" class="navbar-mobile-link">Portfolio</a>
+  <a href="a-propos.html" class="navbar-mobile-link">À Propos</a>
+  <a href="contact.html" class="navbar-mobile-link">Contact</a>
+  <a href="contact.html" class="btn btn-primary">Devis Gratuit</a>
+</div>
+
+<section class="about-hero">
+  <div class="container about-hero-inner">
+    <div class="about-hero-content">
+      <p class="section-label">Notre histoire</p>
+      <h1>À Propos de <span>Horeb Vision Pub SARL</span></h1>
+      <p>Depuis notre création, nous accompagnons les entreprises ivoiriennes dans leur communication digitale et traditionnelle, en combinant créativité locale et expertise technique internationale.</p>
+      <div class="hero-actions">
+        <a href="#about-story" class="btn btn-primary">Notre Histoire</a>
+        <a href="contact.html" class="btn btn-outline">Nous Contacter</a>
+      </div>
+    </div>
+    <div class="about-hero-visual">
+      <div class="about-hero-icon">🌟</div>
+    </div>
+  </div>
+</section>
+
+<section class="about-story" id="about-story">
+  <div class="container about-story-inner">
+    <div class="about-story-content">
+      <h2>Notre Mission</h2>
+      <p>Horeb Vision Pub est née de la volonté de démocratiser l'accès aux services de communication de qualité en Côte d'Ivoire. Nous croyons que chaque entreprise, quelle que soit sa taille, mérite une identité visuelle forte et une présence digitale impactante.</p>
+      <p>Notre équipe combine l'expertise technique internationale avec une profonde connaissance du marché ivoirien, nous permettant de créer des solutions sur mesure qui résonnent avec votre public cible.</p>
+      <div class="about-story-actions">
+        <a href="portfolio.html" class="btn btn-primary">Voir nos Réalisations</a>
+      </div>
+    </div>
+    <div class="about-story-visual">
+      <div class="about-story-icon">🎯</div>
+    </div>
+  </div>
+</section>
+
+<section class="about-values">
+  <div class="container">
+    <div class="section-label centered">Nos Valeurs</div>
+    <h2 class="section-title">Ce qui nous guide</h2>
+    <div class="about-values-grid">
+      <div class="about-value-card" data-animate>
+        <div class="about-value-icon">💡</div>
+        <h3 class="about-value-title">Innovation</h3>
+        <p class="about-value-desc">Nous intégrons constamment les dernières tendances et technologies pour offrir des solutions modernes et efficaces.</p>
+      </div>
+      <div class="about-value-card" data-animate>
+        <div class="about-value-icon">🤝</div>
+        <h3 class="about-value-title">Proximité</h3>
+        <p class="about-value-desc">Nous travaillons en étroite collaboration avec nos clients pour comprendre leurs besoins et co-créer des solutions adaptées.</p>
+      </div>
+      <div class="about-value-card" data-animate>
+        <div class="about-value-icon">🎨</div>
+        <h3 class="about-value-title">Créativité</h3>
+        <p class="about-value-desc">Chaque projet est une opportunité d'exprimer notre créativité et d'apporter une touche unique à votre communication.</p>
+      </div>
+      <div class="about-value-card" data-animate>
+        <div class="about-value-icon">⚡</div>
+        <h3 class="about-value-title">Excellence</h3>
+        <p class="about-value-desc">Nous visons l'excellence dans chaque aspect de notre travail, de la conception à la livraison finale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-team">
+  <div class="container">
+    <div class="section-label centered">Notre Équipe</div>
+    <h2 class="section-title">Les visages derrière Horeb Vision</h2>
+    <div class="about-team-grid">
+      <div class="about-team-member" data-animate>
+        <div class="about-team-photo">👨‍💼</div>
+        <div class="about-team-content">
+          <h3 class="about-team-name">Directeur Créatif</h3>
+          <p class="about-team-role">Design & Stratégie</p>
+          <p class="about-team-desc">Expert en identité visuelle et stratégie de marque, avec plus de 8 ans d'expérience en communication digitale.</p>
+        </div>
+      </div>
+      <div class="about-team-member" data-animate>
+        <div class="about-team-photo">👩‍💻</div>
+        <div class="about-team-content">
+          <h3 class="about-team-name">Développeuse Web</h3>
+          <p class="about-team-role">Frontend & Backend</p>
+          <p class="about-team-desc">Spécialiste en développement web moderne, maîtrisant les dernières technologies pour des sites performants.</p>
+        </div>
+      </div>
+      <div class="about-team-member" data-animate>
+        <div class="about-team-photo">🎬</div>
+        <div class="about-team-content">
+          <h3 class="about-team-name">Motion Designer</h3>
+          <p class="about-team-role">Animation & Vidéo</p>
+          <p class="about-team-desc">Créateur de contenu animé percutant, de la publicité 2D/3D aux vidéos explicatives pédagogiques.</p>
+        </div>
+      </div>
+      <div class="about-team-member" data-animate>
+        <div class="about-team-photo">📊</div>
+        <div class="about-team-content">
+          <h3 class="about-team-name">Chef de Projet Digital</h3>
+          <p class="about-team-role">Marketing & SEO</p>
+          <p class="about-team-desc">Stratège digital expérimenté, spécialisé dans les campagnes Google Ads et l'optimisation des performances.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-stats">
+  <div class="container">
+    <div class="about-stats-grid">
+      <div class="about-stat-item" data-animate>
+        <span class="about-stat-number">150+</span>
+        <span class="about-stat-label">Projets Réalisés</span>
+      </div>
+      <div class="about-stat-item" data-animate>
+        <span class="about-stat-number">50+</span>
+        <span class="about-stat-label">Clients Satisfaits</span>
+      </div>
+      <div class="about-stat-item" data-animate>
+        <span class="about-stat-number">5</span>
+        <span class="about-stat-label">Années d'Expérience</span>
+      </div>
+      <div class="about-stat-item" data-animate>
+        <span class="about-stat-number">24/7</span>
+        <span class="about-stat-label">Support Client</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-cta">
+  <div class="container">
+    <h2>Prêt à collaborer avec nous ?</h2>
+    <p>Que vous ayez besoin d'une identité visuelle complète, d'un site web moderne ou d'une campagne marketing digitale, nous sommes là pour vous accompagner.</p>
+    <div class="about-cta-actions">
+      <a href="contact.html" class="btn btn-primary">Demander un Devis</a>
+      <a href="services.html" class="btn btn-outline">Découvrir nos Services</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          <div class="footer-logo-icon"><img src="WhatsApp Image 2026-05-04 at 12.22.53.jpeg" alt="logo"></div>
+          <div class="footer-logo-name">Horeb Vision Pub SARL</div>
+        </div>
+        <p class="footer-desc">Agence de communication 360° à Abidjan. Créativité locale, excellence technique internationale.</p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link" aria-label="Facebook">f</a>
+          <a href="#" class="footer-social-link" aria-label="Instagram">in</a>
+          <a href="#" class="footer-social-link" aria-label="LinkedIn">li</a>
+          <a href="#" class="footer-social-link" aria-label="WhatsApp">w</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Services</p>
+        <div class="footer-links">
+          <a href="services.html" class="footer-link">Communication Visuelle</a>
+          <a href="services.html" class="footer-link">Marketing Digital</a>
+          <a href="services.html" class="footer-link">Design Web</a>
+          <a href="services.html" class="footer-link">Publicités Animées</a>
+          <a href="services.html" class="footer-link">Posters 3D & Stickers</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigation</p>
+        <div class="footer-links">
+          <a href="horeb-vision-complete.html" class="footer-link">Accueil</a>
+          <a href="portfolio.html" class="footer-link">Portfolio</a>
+          <a href="a-propos.html" class="footer-link">À Propos</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+          <a href="contact.html" class="footer-link">Devis Gratuit</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Adresse</span>
+          <span class="footer-contact-value">Abidjan, Côte d'Ivoire</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Téléphone</span>
+          <span class="footer-contact-value">+225 05 96 39 55 50 </span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Email</span>
+          <span class="footer-contact-value">horebvisionpub@gmail.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Horaires</span>
+          <span class="footer-contact-value">Lun – Sam · 08h – 18h</span>
+        </div>
+      </div>
+    </div><div class="footer-bottom">
+      <p class="footer-copy">© <span class="footer-year"></span> <span>Horeb Vision Pub SARL</span> · Tous droits réservés</p>
+      <div class="footer-badges">
+        <span class="badge badge-red">Marketing</span>
+        <span class="badge badge-green">Web & Mobile</span>
+        <span class="badge badge-blue">Événementiel</span>
+      </div>
+    </div>
+  </div>         
+</footer>       
+   <section class="sponsors">
+  <h2>Ils nous ont fait confiance</h2>
+
+  <div class="sponsor-slider">
+    <div class="sponsor-track">
+      <!-- Logos (1ère fois) -->
+      <img src="croix_rouge.png" alt="Sponsor 1">
+      <img src="azing_ivoire_voyage.png" alt="Sponsor 2">
+      <img src="groupe_carré_d'or.png" alt="Sponsor 3">
+      <img src="glory_service.png" alt="Sponsor 4">
+      <img src="general_service_securité.png" alt="Sponsor 5">
+      <img src="centre_medical_o'de vie.png" alt="">
+      <img src="keyann_trading.png" alt="">
+      <img src="ivoire_santé.png" alt="">
+
+      <!-- Logos (copie pour boucle infinie) -->
+      <img src="croix_rouge.png" alt="Sponsor 1">
+      <img src="azing_ivoire_voyage.png" alt="Sponsor 2">
+      <img src="groupe_carré_d'or.png" alt="Sponsor 3">
+      <img src="glory_service.png" alt="Sponsor 4">
+      <img src="general_service_securité.png" alt="Sponsor 5">
+      <img src="centre_medical_o'de vie.png" alt="">
+      <img src="keyann_trading.png" alt="">
+      <img src="ivoire_santé.png" alt="">
+    </div>
+  </div>
+</section>
+</footer>
+
+<script>
+/* ============================================
+   MAIN.JS — HOREB VISION PUB
+   JavaScript principal du site
+   ============================================ */
+
+// ── On attend que la page soit complètement chargée ──
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ══════════════════════════════════════════
+  // 1. NAVBAR — Effet au scroll
+  // ══════════════════════════════════════════
+  const navbar = document.querySelector('.navbar');
+
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      // Si on a scrollé plus de 20px, on ajoute la classe "scrolled"
+      if (window.scrollY > 20) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  }
+
+  // ══════════════════════════════════════════
+  // 2. MENU BURGER — Ouverture/fermeture mobile
+  // ══════════════════════════════════════════
+  const burger = document.querySelector('.navbar-burger');
+  const mobileMenu = document.querySelector('.navbar-mobile');
+
+  if (burger && mobileMenu) {
+
+    // Clic sur le burger
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    // Fermer le menu si on clique sur un lien
+    const mobileLinks = mobileMenu.querySelectorAll('.navbar-mobile-link');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+  }
+
+  // ══════════════════════════════════════════
+  // 3. LIEN ACTIF — Marquer la page courante
+  // ══════════════════════════════════════════
+  const currentPage = window.location.pathname.split('/').pop() || 'horeb-vision-complete.html';
+  const navLinks = document.querySelectorAll('.navbar-link');
+
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPage) {
+      link.classList.add('active');
+    }
+  });
+
+  // ══════════════════════════════════════════
+  // 4. ANIMATIONS AU SCROLL AVANCÉES
+  // ══════════════════════════════════════════
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Délai cascade pour les éléments multiples
+        const delay = index * 150;
+        setTimeout(() => {
+          entry.target.classList.add('animate-fade-in-up');
+          entry.target.style.opacity = '1';
+        }, delay);
+
+        // Animations spéciales selon le type d'élément
+        if (entry.target.classList.contains('service-card')) {
+          entry.target.style.animationDelay = `${index * 0.1}s`;
+        }
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observer tous les éléments avec data-animate
+  const animatedElements = document.querySelectorAll('[data-animate]');
+  animatedElements.forEach((el, index) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    observer.observe(el);
+  });
+
+  // ══════════════════════════════════════════
+  // 5. ANIMATIONS AU SURVOL INTERACTIVES
+  // ══════════════════════════════════════════
+  // Animation des cartes de service
+  const serviceCards = document.querySelectorAll('.service-card');
+  serviceCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.transform = 'translateY(-12px) scale(1.02)';
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'translateY(0) scale(1)';
+    });
+  });
+
+  // Animation des boutons
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('mouseenter', () => {
+      btn.style.transform = 'translateY(-2px) scale(1.02)';
+    });
+
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = 'translateY(0) scale(1)';
+    });
+
+    btn.addEventListener('mousedown', () => {
+      btn.style.transform = 'translateY(0) scale(0.98)';
+    });
+
+    btn.addEventListener('mouseup', () => {
+      btn.style.transform = 'translateY(-2px) scale(1.02)';
+    });
+  });
+
+  // ══════════════════════════════════════════
+  // 6. ANIMATIONS DE SCROLL PARALLAX
+  // ══════════════════════════════════════════
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    const scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+
+    // Animation du hero au scroll
+    const heroInner = document.querySelector('.hero-inner');
+    if (heroInner) {
+      const scrolled = currentScrollY * 0.12;
+      heroInner.style.transform = `translateY(${scrolled}px)`;
+    }
+
+    // Animation des éléments décoratifs
+    const decorativeElements = document.querySelectorAll('.decorative-float');
+    decorativeElements.forEach(el => {
+      const speed = parseFloat(el.dataset.speed) || 0.5;
+      const yPos = -(currentScrollY * speed);
+      el.style.transform = `translateY(${yPos}px)`;
+    });
+
+    lastScrollY = currentScrollY;
+  });
+
+  // ══════════════════════════════════════════
+  // 7. ANIMATIONS AU CLIC
+  // ══════════════════════════════════════════
+  document.addEventListener('click', (e) => {
+    // Effet ripple sur les boutons
+    if (e.target.classList.contains('btn') || e.target.closest('.btn')) {
+      const btn = e.target.classList.contains('btn') ? e.target : e.target.closest('.btn');
+      const ripple = document.createElement('span');
+      const rect = btn.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
+
+      ripple.style.width = ripple.style.height = size + 'px';
+      ripple.style.left = x + 'px';
+      ripple.style.top = y + 'px';
+      ripple.classList.add('ripple-effect');
+
+      btn.appendChild(ripple);
+
+      setTimeout(() => {
+        ripple.remove();
+      }, 600);
+    }
+  });
+
+  // ══════════════════════════════════════════
+  // 8. ANIMATIONS DE FORMULAIRE
+  // ══════════════════════════════════════════
+  const formInputs = document.querySelectorAll('.form-input, .form-textarea, .form-select');
+  formInputs.forEach(input => {
+    // Animation au focus
+    input.addEventListener('focus', () => {
+      input.parentElement.classList.add('focused');
+    });
+
+    input.addEventListener('blur', () => {
+      input.parentElement.classList.remove('focused');
+      // Validation simple
+      if (input.value.trim() !== '') {
+        input.classList.add('valid');
+        input.classList.remove('invalid');
+      } else if (input.hasAttribute('required')) {
+        input.classList.add('invalid');
+        input.classList.remove('valid');
+      }
+    });
+
+    // Animation au survol
+    input.addEventListener('mouseenter', () => {
+      if (!input.classList.contains('focused')) {
+        input.style.transform = 'translateY(-1px)';
+      }
+    });
+
+    input.addEventListener('mouseleave', () => {
+      if (!input.classList.contains('focused')) {
+        input.style.transform = 'translateY(0)';
+      }
+    });
+  });
+
+  // ══════════════════════════════════════════
+  // 9. ANIMATIONS DÉCORATIVES
+  // ══════════════════════════════════════════
+  // Particules flottantes
+  const createParticle = () => {
+    const particle = document.createElement('div');
+    particle.className = 'floating-particle';
+    particle.style.cssText = `
+      position: fixed;
+      width: ${Math.random() * 4 + 2}px;
+      height: ${Math.random() * 4 + 2}px;
+      background: ${Math.random() > 0.5 ? 'var(--secondary)' : 'var(--accent)'};
+      border-radius: 50%;
+      opacity: ${Math.random() * 0.5 + 0.1};
+      pointer-events: none;
+      z-index: -1;
+      left: ${Math.random() * 100}vw;
+      top: 100vh;
+      animation: float-particle ${Math.random() * 10 + 10}s linear infinite;
+    `;
+
+    document.body.appendChild(particle);
+
+    setTimeout(() => {
+      particle.remove();
+    }, 15000);
+  };
+
+  // Créer des particules occasionnellement
+  setInterval(() => {
+    if (Math.random() > 0.95) { // 5% de chance chaque intervalle
+      createParticle();
+    }
+  }, 2000);
+
+  // ══════════════════════════════════════════
+  // 10. ANIMATIONS DE CHARGEMENT
+  // ══════════════════════════════════════════
+  // Simuler un petit délai de chargement pour les animations d'entrée
+  setTimeout(() => {
+    document.body.classList.add('loaded');
+    const spinner = document.querySelector('.loading-spinner');
+    if (spinner) {
+      spinner.style.opacity = '0';
+      setTimeout(() => spinner.remove(), 600);
+    }
+  }, 500);
+
+  // ══════════════════════════════════════════
+  // 11. ANNÉE DYNAMIQUE dans le footer
+  // ══════════════════════════════════════════
+  const yearEl = document.querySelector('.footer-year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+});
+</script>
+</body>
+</html>
