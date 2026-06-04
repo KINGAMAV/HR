@@ -30,7 +30,7 @@
 .footer-logo-icon {
   width: 42px;
   height: 42px;
-  background: var(--primary);
+  background: none;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;

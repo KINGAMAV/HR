@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     burger.addEventListener('click', () => {
       burger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
+      burger.setAttribute('aria-expanded', burger.classList.contains('open'));
     });
 
     // Fermer le menu si on clique sur un lien
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => {
         burger.classList.remove('open');
         mobileMenu.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
       });
     });
   }

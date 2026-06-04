@@ -693,7 +693,7 @@ body.loaded {
 .navbar-logo-icon {
   width: 38px;
   height: 38px;
-  background: var(--primary);
+  background:white;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -789,6 +789,7 @@ body.loaded {
   cursor: pointer;
   background: none;
   border: none;
+  z-index: 1001;
 }
 
 .navbar-burger span {
@@ -830,6 +831,7 @@ body.loaded {
   transform: translateY(-10px);
   opacity: 0;
   transition: all var(--transition-base);
+  z-index: 1000;
 }
 
 .navbar-mobile.open {
@@ -901,7 +903,7 @@ body.loaded {
 .footer-logo-icon {
   width: 42px;
   height: 42px;
-  background: var(--primary);
+  background: none;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -1769,7 +1771,7 @@ body.loaded {
 <nav class="navbar">
   <div class="container navbar-inner">
     <a href="index.html" class="navbar-logo">
-      <div class="navbar-logo-icon"><img src="WhatsApp Image 2026-05-04 at 12.22.53.jpeg" alt=""></div>
+      <div class="navbar-logo-icon"><img src="logohoreb.png" alt=""></div>
       <div class="navbar-logo-text">
         <span class="navbar-logo-name">Horeb Vision Pub Sarl</span>
         <span class="navbar-logo-sub">Communication & Digital</span>
@@ -1785,7 +1787,7 @@ body.loaded {
       </ul>
       <a href="contact.html" class="btn btn-primary navbar-cta">Devis Gratuit</a>
     </div>
-    <button class="navbar-burger" aria-label="Ouvrir le menu">
+    <button type="button" class="navbar-burger" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -2001,7 +2003,7 @@ body.loaded {
     <div class="footer-top">
       <div class="footer-brand-col">
         <div class="footer-logo">
-          <div class="footer-logo-icon"><img src="WhatsApp Image 2026-05-04 at 12.22.53.jpeg" alt=""></div>
+          <div class="footer-logo-icon"><img src="logohoreb.png" alt=""></div>
           <div class="footer-logo-name">Horeb Vision Pub SARL<span>.</span></div>
         </div>
         <p class="footer-desc">Agence de communication 360° à Abidjan. Créativité locale, excellence technique internationale.</p>
@@ -2068,7 +2070,6 @@ body.loaded {
   <div class="sponsor-slider">
     <div class="sponsor-track">
       <!-- Logos (1ère fois) -->
-      <img src="croix_rouge.png" alt="Sponsor 1">
       <img src="azing_ivoire_voyage.png" alt="Sponsor 2">
       <img src="groupe_carré_d'or.png" alt="Sponsor 3">
       <img src="glory_service.png" alt="Sponsor 4">
@@ -2078,7 +2079,6 @@ body.loaded {
       <img src="ivoire_santé.png" alt="">
 
       <!-- Logos (copie pour boucle infinie) -->
-      <img src="croix_rouge.png" alt="Sponsor 1">
       <img src="azing_ivoire_voyage.png" alt="Sponsor 2">
       <img src="groupe_carré_d'or.png" alt="Sponsor 3">
       <img src="glory_service.png" alt="Sponsor 4">
@@ -2131,6 +2131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     burger.addEventListener('click', () => {
       burger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
+      burger.setAttribute('aria-expanded', burger.classList.contains('open'));
     });
 
     // Fermer le menu si on clique sur un lien
@@ -2139,6 +2140,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => {
         burger.classList.remove('open');
         mobileMenu.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
       });
     });
   }

@@ -693,7 +693,7 @@ body.loaded {
 .navbar-logo-icon {
   width: 38px;
   height: 38px;
-  background: var(--primary);
+  background: none;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -792,6 +792,7 @@ body.loaded {
   cursor: pointer;
   background: none;
   border: none;
+  z-index: 1001;
 }
 
 .navbar-burger span {
@@ -833,6 +834,7 @@ body.loaded {
   transform: translateY(-10px);
   opacity: 0;
   transition: all var(--transition-base);
+  z-index: 1000;
 }
 
 .navbar-mobile.open {
@@ -905,7 +907,7 @@ body.loaded {
 .footer-logo-icon {
   width: 42px;
   height: 42px;
-  background: var(--primary);
+  background: none;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -1327,7 +1329,7 @@ body.loaded {
 
 .about-team-photo {
   width: 100%;
-  height: 250px;
+  height: 340px;
   background: linear-gradient(135deg, var(--primary), var(--accent));
   display: flex;
   align-items: center;
@@ -1477,8 +1479,8 @@ body.loaded {
 
 <nav class="navbar">
   <div class="container navbar-inner">
-    <a href="horeb-vision-complete.html" class="navbar-logo">
-      <div class="navbar-logo-icon"><img src="WhatsApp Image 2026-05-04 at 12.22.53.jpeg" alt="logo"></div>
+    <a href="index.html" class="navbar-logo">
+      <div class="navbar-logo-icon"><img src="logohoreb.png" alt="logo"></div>
       <div class="navbar-logo-text">
         <span class="navbar-logo-name">Horeb Vision Pub SARL</span>
         <span class="navbar-logo-sub">Communication & Digital</span>
@@ -1486,7 +1488,7 @@ body.loaded {
     </a>
     <div class="navbar-menu">
       <ul class="navbar-links">
-        <li><a href="horeb-vision-complete.html" class="navbar-link">Accueil</a></li>
+        <li><a href="index.html" class="navbar-link">Accueil</a></li>
         <li><a href="services.html" class="navbar-link">Services</a></li>
         <li><a href="portfolio.html" class="navbar-link">Portfolio</a></li>
         <li><a href="a-propos.html" class="navbar-link active">À Propos</a></li>
@@ -1494,14 +1496,14 @@ body.loaded {
       </ul>
       <a href="contact.html" class="btn btn-primary navbar-cta">Devis Gratuit</a>
     </div>
-    <button class="navbar-burger" aria-label="Ouvrir le menu">
+    <button type="button" class="navbar-burger" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
 <div class="navbar-mobile">
-  <a href="horeb-vision-complete.html" class="navbar-mobile-link">Accueil</a>
+  <a href="index.html" class="navbar-mobile-link">Accueil</a>
   <a href="services.html" class="navbar-mobile-link">Services</a>
   <a href="portfolio.html" class="navbar-mobile-link">Portfolio</a>
   <a href="a-propos.html" class="navbar-mobile-link">À Propos</a>
@@ -1577,7 +1579,7 @@ body.loaded {
     <h2 class="section-title">Les visages derrière Horeb Vision</h2>
     <div class="about-team-grid">
       <div class="about-team-member" data-animate>
-        <div class="about-team-photo">👨‍💼</div>
+        <div class="about-team-photo"><img src="medias/directeurcreatif.jpeg" alt=""></div>
         <div class="about-team-content">
           <h3 class="about-team-name">Directeur Créatif</h3>
           <p class="about-team-role">Design & Stratégie</p>
@@ -1585,15 +1587,15 @@ body.loaded {
         </div>
       </div>
       <div class="about-team-member" data-animate>
-        <div class="about-team-photo">👩‍💻</div>
+        <div class="about-team-photo"><img src="medias/developpeur.png" alt=""></div>
         <div class="about-team-content">
-          <h3 class="about-team-name">Développeuse Web</h3>
+          <h3 class="about-team-name">Développeur Web</h3>
           <p class="about-team-role">Frontend & Backend</p>
           <p class="about-team-desc">Spécialiste en développement web moderne, maîtrisant les dernières technologies pour des sites performants.</p>
         </div>
       </div>
       <div class="about-team-member" data-animate>
-        <div class="about-team-photo">🎬</div>
+        <div class="about-team-photo"><img src="medias/motion.jpeg" alt=""></div>
         <div class="about-team-content">
           <h3 class="about-team-name">Motion Designer</h3>
           <p class="about-team-role">Animation & Vidéo</p>
@@ -1601,7 +1603,7 @@ body.loaded {
         </div>
       </div>
       <div class="about-team-member" data-animate>
-        <div class="about-team-photo">📊</div>
+        <div class="about-team-photo"><img src="medias/chefdeprojet.png" alt=""></div>
         <div class="about-team-content">
           <h3 class="about-team-name">Chef de Projet Digital</h3>
           <p class="about-team-role">Marketing & SEO</p>
@@ -1651,7 +1653,7 @@ body.loaded {
     <div class="footer-top">
       <div class="footer-brand-col">
         <div class="footer-logo">
-          <div class="footer-logo-icon"><img src="WhatsApp Image 2026-05-04 at 12.22.53.jpeg" alt="logo"></div>
+          <div class="footer-logo-icon"><img src="logohoreb.png" alt="logo"></div>
           <div class="footer-logo-name">Horeb Vision Pub SARL</div>
         </div>
         <p class="footer-desc">Agence de communication 360° à Abidjan. Créativité locale, excellence technique internationale.</p>
@@ -1675,7 +1677,7 @@ body.loaded {
       <div>
         <p class="footer-col-title">Navigation</p>
         <div class="footer-links">
-          <a href="horeb-vision-complete.html" class="footer-link">Accueil</a>
+          <a href="index.html" class="footer-link">Accueil</a>
           <a href="portfolio.html" class="footer-link">Portfolio</a>
           <a href="a-propos.html" class="footer-link">À Propos</a>
           <a href="contact.html" class="footer-link">Contact</a>
@@ -1777,6 +1779,7 @@ document.addEventListener('DOMContentLoaded', () => {
     burger.addEventListener('click', () => {
       burger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
+      burger.setAttribute('aria-expanded', burger.classList.contains('open'));
     });
 
     // Fermer le menu si on clique sur un lien
@@ -1785,6 +1788,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => {
         burger.classList.remove('open');
         mobileMenu.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -1792,7 +1796,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ══════════════════════════════════════════
   // 3. LIEN ACTIF — Marquer la page courante
   // ══════════════════════════════════════════
-  const currentPage = window.location.pathname.split('/').pop() || 'horeb-vision-complete.html';
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('.navbar-link');
 
   navLinks.forEach(link => {
